@@ -1,0 +1,239 @@
+@import url("./base.less");
+@import url("./media.less");
+@color: #d3079e;
+
+
+// @media screen and (width: 640px) {
+//     html {
+//         font-size: 100px;
+//     }
+// }
+
+.view {
+    background-color: #f1f1f1;
+
+    // 头部
+    header {
+        height: .44rem;
+        background-color: #f7f7f7;
+        border-bottom: .01rem solid #ddd;
+        padding-left: .55rem;
+        padding-right: .44rem;
+        position: relative;
+        .header_location { 
+            font-size: .14rem;
+            width: 0.55rem;
+            height: 100%;
+            color: @color;
+            padding: .13rem .12rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+            span {
+                border: .05rem solid transparent;
+                border-top-color: @color;
+                position: absolute;
+                top: 50%;
+                right: 0;
+            }
+        }
+        h1 {
+            width: 100%;
+            font-size: .16rem;
+            font-weight: 400;
+            line-height: .44rem;
+            text-align: center;
+        }
+        .header_user {
+            width: .44rem;
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: .11rem;
+
+            img {
+                width: .22rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        header {
+            .header_location {
+                width: 42.5px;
+            }
+        }
+    }
+
+    // 轮播图
+    .carousel {
+        overflow: hidden;
+        position: relative;
+        .img {
+            width: 900%;
+            li {
+                width: 11.1111%;
+                float: left;
+            }
+        }
+        .indexer {
+            position: absolute;
+            bottom: .03rem;
+            left: 50%;
+            transform: translateX(-50%);
+            list-style: none;
+            li {
+                width: .1rem;
+                height: .1rem;
+                border: .01rem solid #fff;
+                border-radius: 50%;
+                background-color: #ccc;
+                margin-right: .03rem;
+                float: left;
+            }
+            .active {
+                background-color: #fff;
+            }
+        }
+    }
+
+    // 导航栏
+    .nav {
+        padding-bottom: .15rem;
+        .nav_top {
+            padding: .04rem 0;
+            ul {
+                li {
+                    width: 33.33%;
+                    float: left;
+                    padding: .04rem;
+                }
+            }
+        }
+        .nav_bottom {
+            border-top: .01rem solid #ddd;
+            ul {
+                li {
+                    width: 25%;
+                    float: left;
+                    border-right: .01rem solid #ddd;
+                    border-bottom: .01rem solid #ddd;
+                }
+            }
+        }
+    }
+
+    // 优惠
+    .cheap {
+        padding-bottom: .15rem;
+        background-color: #f7f7f7;
+        ul {
+            // border-bottom: .01rem solid #cdcdcd;
+            li {
+                width: 50%;
+                float: left;
+                border-bottom: .01rem solid #cdcdcd;
+                &:nth-child(2) {
+                    border-left: .01rem solid #cdcdcd;
+                }
+                &:nth-child(3) {
+                    border-left: .01rem solid #cdcdcd;
+                }
+            }
+            
+        }
+    }
+
+    // 热门活动
+    .hot {
+        h3 {
+            font-size: .16rem;
+            font-weight: 400;
+            // height: 36px;
+            border-bottom: .01rem solid #ddd;
+            padding: .13rem 0 .08rem .16rem;
+        }
+        ul {
+            li {
+                border-bottom: .01rem solid #ddd;
+            }
+        }
+        margin-bottom: .15rem;
+    }
+
+    // 度周末
+    .weekend {
+        .weekend_title {
+            border-top: 1px solid #ddd;
+            .weekend_title_left,
+            .weekend_title_right {
+                width: 50%;
+                height: .44rem;
+                padding-left: 1.28rem;
+                float: left;
+                background-color: #f7f7f7;
+                h4 {
+                    font-size: .12rem;
+                    width: .65rem;
+                    font-weight: 400;
+                    text-align: center;
+                    padding-top: .15rem;
+                    padding-bottom: .12rem;
+                }
+            }
+            .weekend_title_left {
+                h4 {
+                    color: @color;
+                    border-bottom: 2px solid @color;
+                }
+            }
+        }
+        .weekend_content {
+            a {
+                border-bottom: 1px solid #ddd;
+                background-color: #fff;
+                margin-bottom: 15px;
+                p:nth-of-type(1) {
+                    font-size: .13rem;
+                    margin-top: .07rem;
+                    margin-bottom: .1rem;
+                }
+                p:nth-of-type(2) {
+                    font-size: .15rem;
+                    margin-bottom: .1rem;
+                }
+            }
+            .more {
+                font-size: .13rem;
+                height: .31rem;
+                line-height: .3rem;
+                text-align: center;
+                border-bottom: 1px solid #ddd;
+                span {
+                    display: inline-block;
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+
+    // 底部
+    footer {
+        padding: .08rem .1rem;
+        background-color: @color;
+        a {
+            font-size: .14rem;
+            color: #fff;
+            float: left;
+        }
+        .register {
+            margin-right: .2rem;
+        }
+        .top {
+            float: right;
+        }
+    }
+}
+
+
+
